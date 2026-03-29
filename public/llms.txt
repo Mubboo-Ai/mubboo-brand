@@ -1,0 +1,14 @@
+# Mubboo
+> AI-powered consumer comparison and life assistant platform
+
+Mubboo helps everyday consumers compare products, find flights, understand finances, discover local services, and access practical information — all tailored for their specific country.
+
+## Links
+- Website: https://mubboo.ai
+- Australia: https://mubboo.au
+- United States: https://mubboo.com
+- United Kingdom: https://mubboo.uk
+- New Zealand: https://mubboo.nz
+- News: https://mubboo.ai/news
+- Blog: https://mubboo.ai/blog
+- Contact: admin@mubboo.ai

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mubboo.ai/sitemap.xml
