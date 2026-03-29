@@ -1,0 +1,20 @@
+version: 1
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - npm ci
+    build:
+      commands:
+        - npm run build
+    postBuild:
+      commands:
+        - node -e "const https=require('https');const options={hostname:'api.indexnow.org',path:'/indexnow',method:'POST',headers:{'Content-Type':'application/json'}};const data=JSON.stringify({host:'mubboo.ai',key:'${INDEXNOW_SECRET}',keyLocation:'https://mubboo.ai/${INDEXNOW_SECRET}.txt',urlList:['https://mubboo.ai','https://mubboo.ai/news','https://mubboo.ai/blog','https://mubboo.ai/countries','https://mubboo.ai/about','https://mubboo.ai/contact']});const req=https.request(options,res=>{console.log('IndexNow:',res.statusCode)});req.write(data);req.end();"
+  artifacts:
+    baseDirectory: .next
+    files:
+      - '**/*'
+  cache:
+    paths:
+      - node_modules/**/*
+      - .next/cache/**/*

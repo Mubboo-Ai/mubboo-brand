@@ -1,0 +1,41 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  /* Fonts */
+  --font-sans: var(--font-dm-sans), "DM Sans", sans-serif;
+  --font-display: var(--font-playfair), "Playfair Display", serif;
+
+  /* Brand colours */
+  --color-mubboo: #F97316;
+
+  /* Channel colours */
+  --color-channel-shopping: #F97316;
+  --color-channel-travel: #3B82F6;
+  --color-channel-local: #22C55E;
+  --color-channel-finance: #D97706;
+  --color-channel-info: #7C3AED;
+
+  /* News tag colours */
+  --color-tag-ai: #F97316;
+  --color-tag-shopping: #3B82F6;
+  --color-tag-travel: #22C55E;
+  --color-tag-finance: #D97706;
+  --color-tag-local: #7C3AED;
+  --color-tag-ecommerce: #EC4899;
+  --color-tag-industry: #6B7280;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
