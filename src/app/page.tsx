@@ -43,76 +43,6 @@ const placeholderArticles = [
   },
 ];
 
-// Decorative background shapes for hero
-function HeroShapes() {
-  const shapes = [
-    { type: 'circle', cx: '8%', cy: '20%', r: 28, colour: '#F97316' },
-    { type: 'circle', cx: '92%', cy: '30%', r: 20, colour: '#3B82F6' },
-    { type: 'rect', x: '85%', y: '65%', size: 36, rotation: 15, colour: '#22C55E' },
-    { type: 'rect', x: '12%', y: '75%', size: 24, rotation: 30, colour: '#D97706' },
-    { type: 'diamond', cx: '5%', cy: '50%', size: 22, colour: '#7C3AED' },
-    { type: 'diamond', cx: '95%', cy: '15%', size: 30, colour: '#F97316' },
-    { type: 'circle', cx: '75%', cy: '80%', r: 16, colour: '#3B82F6' },
-    { type: 'triangle', cx: '20%', cy: '10%', size: 32, colour: '#22C55E' },
-    { type: 'triangle', cx: '80%', cy: '50%', size: 24, colour: '#D97706' },
-    { type: 'rect', x: '50%', y: '5%', size: 20, rotation: 45, colour: '#7C3AED' },
-  ];
-
-  return (
-    <svg
-      className="absolute inset-0 w-full h-full pointer-events-none"
-      aria-hidden="true"
-      preserveAspectRatio="none"
-    >
-      {shapes.map((s, i) => {
-        const opacity = 0.06 + (i % 3) * 0.02;
-        if (s.type === 'circle') {
-          return <circle key={i} cx={s.cx} cy={s.cy} r={s.r} fill={s.colour} opacity={opacity} />;
-        }
-        if (s.type === 'rect') {
-          return (
-            <rect
-              key={i}
-              x={s.x}
-              y={s.y}
-              width={s.size}
-              height={s.size}
-              rx={4}
-              fill={s.colour}
-              opacity={opacity}
-              transform={`rotate(${s.rotation} ${s.x} ${s.y})`}
-            />
-          );
-        }
-        if (s.type === 'diamond') {
-          return (
-            <rect
-              key={i}
-              x={s.cx}
-              y={s.cy}
-              width={s.size}
-              height={s.size}
-              fill={s.colour}
-              opacity={opacity}
-              transform={`rotate(45 ${s.cx} ${s.cy})`}
-            />
-          );
-        }
-        // triangle
-        const half = (s.size ?? 24) / 2;
-        return (
-          <polygon
-            key={i}
-            points={`${s.cx},${parseFloat(String(s.cy)) - half} ${parseFloat(String(s.cx)) - half},${parseFloat(String(s.cy)) + half} ${parseFloat(String(s.cx)) + half},${parseFloat(String(s.cy)) + half}`}
-            fill={s.colour}
-            opacity={opacity}
-          />
-        );
-      })}
-    </svg>
-  );
-}
-
 export default function Home() {
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -135,9 +65,9 @@ export default function Home() {
       />
 
       {/* ── Section 1: Hero ── */}
-      <section className="relative overflow-hidden py-20 sm:py-28 lg:py-36">
-        <HeroShapes />
-        <div className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 text-center">
+      <section className="py-12 sm:py-16">
+
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 text-center">
           <span className="inline-block rounded-full bg-mubboo px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-white">
             AI-powered consumer platform
           </span>
@@ -307,7 +237,7 @@ export default function Home() {
       </section>
 
       {/* ── Section 5: Mission Quote ── */}
-      <section className="py-16 sm:py-24">
+      <section className="py-16 sm:py-20">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 text-center">
           <blockquote className="font-display text-2xl italic leading-relaxed text-gray-800 sm:text-3xl">
             &ldquo;We&apos;re building Mubboo because we believe AI should work for everyday

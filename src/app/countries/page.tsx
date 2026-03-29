@@ -20,7 +20,7 @@ export default function CountriesPage() {
   return (
     <>
       {/* ── Header ── */}
-      <section className="py-16 sm:py-24">
+      <section className="py-12 sm:py-16">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="font-display text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
             Mubboo around the world
