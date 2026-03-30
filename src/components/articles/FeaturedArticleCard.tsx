@@ -13,17 +13,13 @@ export default function FeaturedArticleCard({ article, type }: Props) {
       href={`/${type}/${article.slug}`}
       className="group block rounded-xl border border-gray-200 bg-white p-8 transition-all hover:border-mubboo hover:-translate-y-0.5 hover:shadow-md"
     >
-      {article.image ? (
+      {article.image && (
         <div className="mb-6 overflow-hidden rounded-lg">
           <img
             src={article.image}
             alt={article.title}
             className="aspect-[2/1] w-full object-cover"
           />
-        </div>
-      ) : (
-        <div className="mb-6 flex aspect-[2/1] items-center justify-center rounded-lg bg-gray-100">
-          <span className="text-4xl text-gray-300">&#9998;</span>
         </div>
       )}
       <div className="flex flex-wrap gap-2">
