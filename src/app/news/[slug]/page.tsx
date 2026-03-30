@@ -120,17 +120,13 @@ export default async function NewsArticlePage({ params }: PageProps) {
           </div>
 
           {/* Hero image */}
-          {frontmatter.image ? (
+          {frontmatter.image && (
             <div className="mt-8 overflow-hidden rounded-xl">
               <img
                 src={frontmatter.image}
                 alt={frontmatter.title}
                 className="aspect-[2/1] w-full object-cover"
               />
-            </div>
-          ) : (
-            <div className="mt-8 flex aspect-[2/1] items-center justify-center rounded-xl bg-gray-100">
-              <span className="text-6xl text-gray-200">&#9998;</span>
             </div>
           )}
 
