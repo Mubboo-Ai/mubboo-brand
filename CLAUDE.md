@@ -157,6 +157,24 @@ First person. Experience-driven with at least two specific Mubboo references per
 4. Question-based headings: at least one H2 as a question matching AI search queries
 5. Named author on every article
 
+### Country Site Linking Rule (MANDATORY)
+
+Every News article MUST include at least one natural dofollow link to a relevant country site article or channel page within the body text or "Mubboo's Take" section. This is the primary mechanism for distributing link equity from mubboo.ai to country sites.
+
+**Current priority (until UK/CA/NZ affiliate programs are active):**
+- **mubboo.com (US)** — primary focus, ~60% of links
+- **mubboo.au (AU)** — secondary focus, ~40% of links
+- **mubboo.uk / mubboo.nz / mubboo.ca** — only link when the article topic is directly relevant to that market. Do not force links to these sites.
+
+**Future adjustment (when UK/CA/NZ affiliate programs are active):**
+- Redistribute to US 40% / UK+AU 25% each / NZ+CA 10%
+
+**Link quality rules:**
+- Anchor text must be natural and contextual, never "click here" or naked URLs
+- Link to specific articles when relevant (e.g., mubboo.com/shopping/best-robot-vacuums)
+- If no directly relevant article exists yet, link to the channel page (e.g., mubboo.com/shopping)
+- Multiple country links in one article are fine when natural, but one is the minimum
+
 ### E-E-A-T
 
 - Experience (Blog only): 2+ specific references to building Mubboo

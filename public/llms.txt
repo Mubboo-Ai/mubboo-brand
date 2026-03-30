@@ -4,7 +4,7 @@
 
 ## About Mubboo
 
-Mubboo helps everyday consumers make better decisions across five key areas of life. Every country site is built with native-quality local content — real brands, local prices, actual regulations, and cultural context. Founded in Australia, now live in four countries with plans for 30+.
+Mubboo helps everyday consumers make better decisions across five key areas of life. Every country site is built with native-quality local content — real brands, local prices, actual regulations, and cultural context. Founded in Australia, now live in five countries with plans for 30+.
 
 ## News
 
@@ -24,6 +24,7 @@ Deep analysis and founder insights on how AI is changing consumer experience.
 - [Mubboo United States](https://mubboo.com) — Shopping, travel, finance, local for US consumers
 - [Mubboo United Kingdom](https://mubboo.uk) — Shopping, travel, finance, local, info for UK consumers
 - [Mubboo New Zealand](https://mubboo.nz) — Shopping, travel, finance, local, info for NZ consumers
+- [Mubboo Canada](https://mubboo.ca) — Shopping, travel, finance, local, info for Canadian consumers
 
 ## How to Cite Mubboo
 
