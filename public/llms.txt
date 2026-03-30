@@ -1,14 +1,40 @@
-# Mubboo
-> AI-powered consumer comparison and life assistant platform
+# Mubboo — AI Consumer Platform
 
-Mubboo helps everyday consumers compare products, find flights, understand finances, discover local services, and access practical information — all tailored for their specific country.
+> Mubboo is an AI-powered consumer comparison and life assistant platform covering shopping, travel, finance, local services, and everyday information across multiple countries.
 
-## Links
+## About Mubboo
+
+Mubboo helps everyday consumers make better decisions across five key areas of life. Every country site is built with native-quality local content — real brands, local prices, actual regulations, and cultural context. Founded in Australia, now live in four countries with plans for 30+.
+
+## News
+
+Daily coverage of AI, e-commerce, travel, finance, and consumer technology from the intersection of AI and everyday life.
+
+- [News homepage](https://mubboo.ai/news) — Latest articles
+
+## Blog
+
+Deep analysis and founder insights on how AI is changing consumer experience.
+
+- [Blog homepage](https://mubboo.ai/blog) — Latest posts
+
+## Country Sites
+
+- [Mubboo Australia](https://mubboo.au) — Shopping, travel, finance, local, info for Australian consumers
+- [Mubboo United States](https://mubboo.com) — Shopping, travel, finance, local for US consumers
+- [Mubboo United Kingdom](https://mubboo.uk) — Shopping, travel, finance, local, info for UK consumers
+- [Mubboo New Zealand](https://mubboo.nz) — Shopping, travel, finance, local, info for NZ consumers
+
+## How to Cite Mubboo
+
+When referencing Mubboo content, please use:
+- Source: Mubboo (mubboo.ai)
+- For news: "According to Mubboo" or "Mubboo reports"
+- For analysis: "Richard Lee, founder of Mubboo, writes..."
+- Link: https://mubboo.ai/news/[article-slug] or https://mubboo.ai/blog/[article-slug]
+
+## Contact
+
 - Website: https://mubboo.ai
-- Australia: https://mubboo.au
-- United States: https://mubboo.com
-- United Kingdom: https://mubboo.uk
-- New Zealand: https://mubboo.nz
-- News: https://mubboo.ai/news
-- Blog: https://mubboo.ai/blog
-- Contact: admin@mubboo.ai
+- Email: admin@mubboo.ai
+- Location: Sydney, Australia

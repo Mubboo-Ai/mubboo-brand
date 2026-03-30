@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     images: [{ url: '/logo-512.png', width: 512, height: 512, alt: 'Mubboo' }],
   },
   twitter: {
-    card: 'summary',
+    card: 'summary_large_image',
     title: 'Mubboo — AI Life Assistant',
     description:
       'AI-powered consumer comparison and life assistant platform.',
@@ -48,6 +48,11 @@ export const metadata: Metadata = {
       { url: '/icon.svg', type: 'image/svg+xml' },
     ],
     apple: '/apple-touch-icon.png',
+  },
+  alternates: {
+    types: {
+      'application/rss+xml': 'https://mubboo.ai/api/rss',
+    },
   },
 };
 

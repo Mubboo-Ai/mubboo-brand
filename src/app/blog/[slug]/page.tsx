@@ -31,6 +31,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       title: article.frontmatter.title,
       description: article.frontmatter.excerpt,
       publishedTime: article.frontmatter.date,
+      authors: [article.frontmatter.author === 'editorial-team' ? 'Mubboo Editorial Team' : 'Richard Lee'],
     },
   };
 }
@@ -49,11 +50,22 @@ export default async function BlogArticlePage({ params }: PageProps) {
     '@type': 'BlogPosting',
     headline: frontmatter.title,
     datePublished: frontmatter.date,
+    dateModified: frontmatter.date,
     description: frontmatter.excerpt,
-    author: {
-      '@type': frontmatter.author === 'editorial-team' ? 'Organization' : 'Person',
-      name: author?.name ?? 'Mubboo',
-    },
+    mainEntityOfPage: `https://mubboo.ai/blog/${frontmatter.slug}`,
+    author:
+      frontmatter.author === 'editorial-team'
+        ? {
+            '@type': 'Organization',
+            name: 'Mubboo Editorial Team',
+            url: 'https://mubboo.ai',
+          }
+        : {
+            '@type': 'Person',
+            name: 'Richard Lee',
+            jobTitle: 'Founder',
+            url: 'https://mubboo.ai/about',
+          },
     publisher: {
       '@type': 'Organization',
       name: 'Mubboo',
