@@ -109,6 +109,20 @@ Mubboo's Take (News only): 60-100 words. Platform perspective, not personal opin
 
 First person. Experience-driven with at least two specific Mubboo references per article. Opinionated. Must teach the reader something new. All opinions grounded in data or direct experience.
 
+### Blog Article Images
+
+Every Blog article over 1,000 words MUST include at least 2-3 inline images from Unsplash to break up text and add visual rhythm. Images should feel editorial, not decorative.
+
+**Rules:**
+- Use Unsplash CDN direct URLs: `https://images.unsplash.com/photo-[ID]?w=1200&q=80`
+- Every image MUST have a caption that adds context or insight — never just describe what's visible
+- Image topics should relate to the surrounding text (e.g., a warehouse/logistics photo near a supply chain discussion, a phone screen near an AI assistant discussion)
+- Hero image: optional for Blog (omit if no suitable image). If used, must be bright, high-quality, daytime
+- Do NOT use stock-looking posed photos. Choose candid, editorial, or architectural shots
+- Place images between major sections to create visual breathing room, not clustered together
+
+**News articles:** Images are optional (News is high-frequency, speed matters more than visuals). Add one if a particularly strong Unsplash match exists.
+
 ### Banned Phrases
 
 - "In today's rapidly evolving landscape" / "In an era of"
