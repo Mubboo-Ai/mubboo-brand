@@ -66,12 +66,12 @@ export default function AboutPage() {
   return (
     <>
       {/* ── Hero ── */}
-      <section className="py-12 sm:py-16">
+      <section className="hero-gradient py-20 sm:py-28">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="font-display text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+          <h1 className="animate-fade-in-up font-display text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">
             AI that serves everyday people
           </h1>
-          <p className="mt-6 text-lg text-gray-600 leading-relaxed">
+          <p className="animate-fade-in-up mt-6 text-lg text-gray-600 leading-relaxed sm:text-xl" style={{ animationDelay: '100ms' }}>
             Mubboo is an AI-powered consumer platform that covers five key areas of life —
             shopping, travel, finance, local services, and everyday information. We build
             native-quality content for each country, so every recommendation is relevant to
@@ -81,25 +81,25 @@ export default function AboutPage() {
       </section>
 
       {/* ── What We Do ── */}
-      <section className="bg-gray-50 py-16 sm:py-20">
+      <section className="bg-gray-50 py-20 sm:py-24">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="font-display text-3xl font-bold text-gray-900">What we do</h2>
             <p className="mt-4 text-lg text-gray-600">
               We help consumers compare products, find better deals, plan trips, understand
-              finances, discover local services, and navigate everyday life — all in one place,
+              finances, discover local services, and make everyday decisions — all in one place,
               tailored for each country.
             </p>
           </div>
-          <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-5">
+          <div className="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5 stagger-children">
             {channels.map((ch) => (
               <div
                 key={ch.id}
-                className="flex flex-col items-center gap-3 rounded-xl p-5 text-center"
+                className="group flex flex-col items-center gap-3 rounded-xl p-5 text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
                 style={{ backgroundColor: ch.bgColour }}
               >
                 <span
-                  className="flex h-12 w-12 items-center justify-center rounded-full text-xl"
+                  className="flex h-12 w-12 items-center justify-center rounded-full text-xl transition-transform duration-300 group-hover:scale-110"
                   style={{ backgroundColor: ch.colour + '20' }}
                 >
                   {ch.icon}
@@ -113,7 +113,7 @@ export default function AboutPage() {
       </section>
 
       {/* ── Our Journey ── */}
-      <section className="py-16 sm:py-20">
+      <section className="py-20 sm:py-24">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <h2 className="text-center font-display text-3xl font-bold text-gray-900">
             Our journey
@@ -122,15 +122,15 @@ export default function AboutPage() {
           <div className="mt-12 hidden sm:block">
             <div className="relative flex justify-between">
               {/* Connecting line */}
-              <div className="absolute top-3 left-3 right-3 h-0.5 bg-gray-200" />
+              <div className="absolute top-4 left-4 right-4 h-0.5 bg-gray-200" />
               <div
-                className="absolute top-3 left-3 h-0.5 bg-mubboo"
+                className="absolute top-4 left-4 h-0.5 bg-mubboo"
                 style={{ width: `${((timeline.length - 1) / timeline.length) * 100}%` }}
               />
               {timeline.map((node, i) => (
                 <div key={i} className="relative flex flex-col items-center text-center" style={{ width: '30%' }}>
-                  <div className={`h-6 w-6 rounded-full border-4 border-white ${i < timeline.length - 1 ? 'bg-mubboo' : 'bg-gray-300'}`} />
-                  <span className="mt-3 text-sm font-bold text-mubboo">{node.year}</span>
+                  <div className={`h-8 w-8 rounded-full border-4 border-white shadow-sm ${i < timeline.length - 1 ? 'bg-mubboo' : 'bg-gray-300'}`} />
+                  <span className="mt-4 text-sm font-bold text-mubboo">{node.year}</span>
                   <span className="mt-1 font-semibold text-gray-900">{node.title}</span>
                   <p className="mt-2 text-sm text-gray-600">{node.description}</p>
                 </div>
@@ -143,7 +143,7 @@ export default function AboutPage() {
               {timeline.map((node, i) => (
                 <div key={i} className="relative">
                   <div
-                    className={`absolute -left-[calc(2rem+5px)] top-1 h-4 w-4 rounded-full border-2 border-white ${
+                    className={`absolute -left-[calc(2rem+5px)] top-1 h-5 w-5 rounded-full border-2 border-white shadow-sm ${
                       i < timeline.length - 1 ? 'bg-mubboo' : 'bg-gray-300'
                     }`}
                   />
@@ -158,18 +158,18 @@ export default function AboutPage() {
       </section>
 
       {/* ── What We Believe ── */}
-      <section className="bg-gray-50 py-16 sm:py-20">
+      <section className="bg-gray-50 py-20 sm:py-24">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <h2 className="text-center font-display text-3xl font-bold text-gray-900">
             What we believe
           </h2>
-          <div className="mt-10 grid gap-6 sm:grid-cols-3">
+          <div className="mt-12 grid gap-6 sm:grid-cols-3 stagger-children">
             {values.map((v) => (
               <div
                 key={v.title}
-                className="rounded-xl border border-gray-200 bg-white p-6"
+                className="group rounded-xl border border-gray-200 bg-white p-6 shadow-[0_1px_2px_rgba(0,0,0,0.04)] transition-all duration-300 hover:border-mubboo hover:-translate-y-1 hover:shadow-[0_8px_24px_rgba(249,115,22,0.10)]"
               >
-                <div className="mb-4">{v.icon}</div>
+                <div className="mb-4 transition-transform duration-300 group-hover:scale-110 inline-block">{v.icon}</div>
                 <h3 className="font-semibold text-gray-900">{v.title}</h3>
                 <p className="mt-2 text-sm text-gray-600">{v.description}</p>
               </div>
@@ -181,12 +181,15 @@ export default function AboutPage() {
       {/* ── Company Info ── */}
       <section className="py-16">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-gray-500">
-            Mubboo &middot; Sydney, Australia &middot;{' '}
-            <a href="mailto:admin@mubboo.ai" className="hover:text-gray-700 transition-colors">
+          <div className="inline-flex items-center gap-2 text-gray-500">
+            <span>Mubboo</span>
+            <span className="h-1 w-1 rounded-full bg-gray-400" />
+            <span>Sydney, Australia</span>
+            <span className="h-1 w-1 rounded-full bg-gray-400" />
+            <a href="mailto:admin@mubboo.ai" className="hover:text-mubboo transition-colors duration-200">
               admin@mubboo.ai
             </a>
-          </p>
+          </div>
         </div>
       </section>
     </>

@@ -31,26 +31,28 @@ export default function Nav() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 bg-white transition-shadow ${
-        scrolled ? 'shadow-sm' : ''
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        scrolled
+          ? 'bg-white/80 backdrop-blur-nav shadow-[0_1px_3px_rgba(0,0,0,0.08)]'
+          : 'bg-white'
       }`}
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2.5">
+          <Link href="/" className="flex items-center gap-2.5 group">
             <Image
               src="/logo-512.png"
               alt="Mubboo"
               width={36}
               height={36}
-              className="rounded-lg"
+              className="rounded-lg transition-transform duration-200 group-hover:scale-105"
             />
             <span className="text-xl font-bold text-gray-900">Mubboo</span>
           </Link>
 
           {/* Desktop links */}
-          <div className="hidden md:flex md:items-center md:gap-8">
+          <div className="hidden md:flex md:items-center md:gap-1">
             {links.map((link) => {
               const isActive =
                 pathname === link.href || pathname.startsWith(link.href + '/');
@@ -58,10 +60,10 @@ export default function Nav() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`text-sm font-medium transition-colors ${
+                  className={`relative px-3.5 py-2 text-sm font-medium rounded-lg transition-colors duration-200 ${
                     isActive
-                      ? 'text-mubboo border-b-2 border-mubboo pb-0.5'
-                      : 'text-gray-600 hover:text-gray-900'
+                      ? 'text-mubboo bg-orange-50'
+                      : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
                   }`}
                 >
                   {link.label}
@@ -73,7 +75,7 @@ export default function Nav() {
           {/* Mobile hamburger */}
           <button
             type="button"
-            className="md:hidden p-2 text-gray-600 hover:text-gray-900"
+            className="md:hidden p-2 text-gray-600 hover:text-gray-900 rounded-lg hover:bg-gray-50 transition-colors"
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Toggle menu"
           >
@@ -90,30 +92,32 @@ export default function Nav() {
         </div>
       </div>
 
-      {/* Mobile menu */}
-      {mobileOpen && (
-        <div className="md:hidden border-t border-gray-100 bg-white">
-          <div className="mx-auto max-w-6xl px-4 py-3 space-y-1">
-            {links.map((link) => {
-              const isActive =
-                pathname === link.href || pathname.startsWith(link.href + '/');
-              return (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className={`block rounded-lg px-3 py-2.5 text-base font-medium transition-colors ${
-                    isActive
-                      ? 'text-mubboo bg-orange-50'
-                      : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
-                  }`}
-                >
-                  {link.label}
-                </Link>
-              );
-            })}
-          </div>
+      {/* Mobile menu — animated slide */}
+      <div
+        className={`md:hidden border-t border-gray-100 bg-white/95 backdrop-blur-nav overflow-hidden transition-all duration-300 ease-in-out ${
+          mobileOpen ? 'max-h-80 opacity-100' : 'max-h-0 opacity-0'
+        }`}
+      >
+        <div className="mx-auto max-w-6xl px-4 py-3 space-y-1">
+          {links.map((link) => {
+            const isActive =
+              pathname === link.href || pathname.startsWith(link.href + '/');
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`block rounded-lg px-3 py-2.5 text-base font-medium transition-colors ${
+                  isActive
+                    ? 'text-mubboo bg-orange-50'
+                    : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
+                }`}
+              >
+                {link.label}
+              </Link>
+            );
+          })}
         </div>
-      )}
+      </div>
     </nav>
   );
 }

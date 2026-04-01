@@ -42,14 +42,13 @@ function BlogContent() {
 
   return (
     <>
-      <section className="py-12 sm:py-16">
+      <section className="hero-gradient py-16 sm:py-20">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <h1 className="font-display text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+          <h1 className="animate-fade-in-up font-display text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
             Blog
           </h1>
-          <p className="mt-3 max-w-2xl text-lg text-gray-600">
-            Deep dives on industry trends, platform updates, and the vision
-            behind Mubboo.
+          <p className="animate-fade-in-up mt-3 max-w-2xl text-lg text-gray-600" style={{ animationDelay: '100ms' }}>
+            Industry analysis, platform updates, and the vision behind Mubboo.
           </p>
           <div className="mt-8">
             <FilterChips
@@ -61,26 +60,33 @@ function BlogContent() {
         </div>
       </section>
 
-      <section className="pb-16 sm:pb-20">
+      <section className="pb-20 sm:pb-24">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           {loading ? (
-            <div className="py-20 text-center text-gray-400">Loading articles...</div>
+            <div className="py-20 text-center">
+              <div className="inline-block h-6 w-6 animate-spin rounded-full border-2 border-gray-300 border-t-mubboo" />
+              <p className="mt-3 text-sm text-gray-500">Loading articles...</p>
+            </div>
           ) : filtered.length === 0 ? (
-            <div className="py-20 text-center text-gray-400">No articles found.</div>
+            <div className="py-20 text-center text-gray-500">No articles found.</div>
           ) : (
             <div className="space-y-8">
               {featured && (
                 <FeaturedArticleCard article={featured} type="blog" />
               )}
-              <div className="grid gap-6 sm:grid-cols-2">
-                {rest.map((article) => (
-                  <ArticleCard
-                    key={article.slug}
-                    article={article}
-                    type="blog"
-                  />
-                ))}
-              </div>
+              {rest.length > 0 && (
+                <div className="border-t border-gray-100 pt-8">
+                  <div className="grid gap-6 sm:grid-cols-2">
+                    {rest.map((article) => (
+                      <ArticleCard
+                        key={article.slug}
+                        article={article}
+                        type="blog"
+                      />
+                    ))}
+                  </div>
+                </div>
+              )}
             </div>
           )}
         </div>
@@ -93,7 +99,9 @@ export default function BlogPage() {
   return (
     <Suspense
       fallback={
-        <div className="py-20 text-center text-gray-400">Loading...</div>
+        <div className="py-20 text-center">
+          <div className="inline-block h-6 w-6 animate-spin rounded-full border-2 border-gray-300 border-t-mubboo" />
+        </div>
       }
     >
       <BlogContent />
