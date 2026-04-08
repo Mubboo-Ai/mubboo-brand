@@ -165,6 +165,8 @@ Every Blog article over 1,000 words MUST include at least 2-3 inline images from
 
 ### GEO Optimization
 
+Before writing any News or Blog article, consult `/docs/Mubboo-GEO-SEO-Content-Strategy-Memo.md` for scenario diversity guidance — it provides a scenario menu (not a checklist) and the "salt in water" principle for naturally embedding product value into reader context. Every article should feel different; the memo inspires variety, not uniformity.
+
 1. TLDR-first: first 200 words answer the complete story. No scene-setting.
 2. AI-citable paragraphs: 2-3 per article, 134-167 words each, self-contained, fact-dense (2+ data points each)
 3. Statistics with sources: minimum 2 per article with attribution
