@@ -1,0 +1,47 @@
+---
+title: "Meta Releases Llama 4 Scout and Maverick — The First Open-Weight Multimodal Mixture-of-Experts Models"
+slug: "meta-llama-4-scout-maverick-open-source-multimodal-moe"
+date: "2026-04-08"
+author: "richard-lee"
+tags: ["ai", "industry"]
+excerpt: "Meta released Llama 4 on April 5 with two models: Scout runs on a single GPU with a 10-million-token context window, and Maverick matches GPT-4o across benchmarks at half the active parameters. Both are natively multimodal and freely downloadable — but the open-source AI landscape just got a lot more competitive."
+published: true
+---
+
+Meta released two new AI models on April 5, 2026 — Llama 4 Scout and Llama 4 Maverick — representing the most significant architectural shift in the Llama family since its original release. Both models are natively multimodal, processing text, images, and video as input. Both use a Mixture-of-Experts (MoE) architecture, a first for Llama. And both are available for free download on Hugging Face and llama.com, continuing Meta's strategy of releasing model weights publicly while closed competitors charge per token. Llama models have now been downloaded more than 650 million times across all versions.
+
+Scout and Maverick are already deployed across Meta AI on WhatsApp, Messenger, Instagram, and meta.ai — reaching billions of users within days of release.
+
+## What Makes Llama 4 Different
+
+The MoE architecture is the headline change. Traditional AI models activate all their parameters for every input — a 70-billion-parameter model uses all 70 billion parameters whether you ask it to summarize a paragraph or analyze a research paper. MoE models split their parameters across specialized "experts" and only activate a subset for each request, which means they can be far larger in total capacity while remaining efficient to run.
+
+Scout has 109 billion total parameters split across 16 experts, but only activates 17 billion parameters per request. That efficiency is what allows it to run on a single H100 GPU with Int4 quantization — a threshold that matters because it puts a competitive model within reach of startups and researchers who cannot afford multi-GPU clusters. Scout also carries a 10-million-token context window, large enough to process entire codebases, book-length documents, or weeks of conversation history in a single pass. On benchmarks, Scout outperforms Google's Gemma 3, Gemini 2.0 Flash-Lite, and Mistral 3.1.
+
+Maverick scales the same architecture further: 400 billion total parameters across 128 experts, still activating only 17 billion per request, with a 1-million-token context window. It matches or beats GPT-4o and Gemini 2.0 Flash across standard benchmarks, and performs comparably to DeepSeek V3 on reasoning and coding tasks — at less than half the active parameters.
+
+Both models are natively multimodal, trained from the ground up on text, image, and video data rather than having vision bolted on after initial training. A third model, Llama 4 Behemoth, remains in training. At 288 billion active parameters and roughly 2 trillion total, it is designed as a teacher model for distilling capabilities into smaller models. Meta says Behemoth already outperforms GPT-4.5, Claude Sonnet 3.7, and Gemini 2.0 Pro on STEM benchmarks.
+
+## The Competitive Landscape
+
+Llama 4 arrived three days after Google released Gemma 4 on April 2 under an Apache 2.0 license — a more permissive open-source license that places no restrictions on commercial use regardless of company size. Meta's Llama 4 uses a community license that requires companies with more than 700 million monthly active users to negotiate a separate agreement, and restricts vision capabilities in the EU. For enterprise users evaluating which open model to adopt, that licensing gap is a real consideration.
+
+The broader competitive picture has never been this crowded. OpenAI shipped GPT-5.4 on March 5. Anthropic released Claude Opus 4.6. DeepSeek V3 from China continues to perform strongly on reasoning and coding. Chinese competition reportedly pushed Meta to accelerate Llama 4 development — the pressure from DeepSeek's strong benchmark results made open-weight leadership a strategic priority for Meta, not just a research initiative.
+
+Meta has scheduled LlamaCon for April 29, where additional details about Llama 4 deployment, fine-tuning, and the Behemoth model are expected.
+
+## Why Consumers Should Care
+
+Most consumers will never download a model from Hugging Face or know what Mixture-of-Experts means. But the competition between open-weight models — Llama 4, Gemma 4, DeepSeek V3 — directly affects the AI features in apps they use every day.
+
+When a powerful model fits on a single GPU, the cost of running AI drops sharply. Startups that could not afford to pay OpenAI or Anthropic per-token API fees can now run a model that matches GPT-4o for the cost of renting one server. That economic shift means more companies can afford to build AI-powered [shopping assistants](https://mubboo.com/shopping), travel planners, and customer service tools — and the competition between those companies drives prices down and quality up for consumers.
+
+The multimodal capabilities also have direct consumer applications. A model that natively understands images and video can power visual search ("find me a jacket like this one"), product comparison from photos, and video-based customer support — features that were previously limited to companies large enough to afford proprietary multimodal APIs.
+
+The open-weight race also matters for data sovereignty. Companies operating in regions with strict data regulations — Australia, the EU, parts of Asia — can run Llama 4 on their own infrastructure instead of sending customer data to US-based API providers. For [platforms operating across multiple countries](https://mubboo.au), that flexibility shapes which AI features are legally deployable and which are not.
+
+## Mubboo's Take
+
+The race between open-weight models — Llama 4, Gemma 4, DeepSeek V3 — is the competition that matters most for consumers, even if most consumers never hear about it. Every improvement in model efficiency and capability translates directly into better AI shopping assistants, smarter travel planners, and more capable customer service. Open models also give platforms like Mubboo the option to run AI features without depending on a single provider's API — a flexibility that matters when you are operating across five countries with different data sovereignty requirements. Scout running on a single GPU is not just a benchmark stat. It is the difference between AI features being affordable for every consumer product or remaining locked behind enterprise pricing.
+
+*Sources: Meta AI blog (April 5, 2026), TechCrunch, Evermx, Wikipedia.*
