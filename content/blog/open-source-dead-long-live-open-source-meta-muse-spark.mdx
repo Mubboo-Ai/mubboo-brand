@@ -1,0 +1,75 @@
+---
+title: "Open Source Is Dead, Long Live Open Source: What Meta's Muse Spark Tells Us About the Future of AI Platforms"
+slug: "open-source-dead-long-live-open-source-meta-muse-spark"
+date: "2026-04-10"
+author: "richard-lee"
+tags: ["vision", "analysis"]
+excerpt: "Meta abandoned open-source AI this week. The company that gave developers Llama — downloaded 650 million times — released Muse Spark as a proprietary model with no open weights. But the same week, Google released Gemma 4 under Apache 2.0. Open-source AI is not dead. It just changed owners."
+published: true
+---
+
+A developer in São Paulo built her entire AI startup on Llama 3. Open weights, community license, fine-tuned for Portuguese-language customer service. She downloaded the model, customized it for her market, and deployed it on a GPU she controls. No API bills. No vendor lock-in. No permission needed.
+
+On April 8, Meta released Muse Spark — proprietary, no weights, no fine-tuning access. The open-source era that produced Llama, the model her business depends on, appears to be over at Meta. But on April 2, Google released Gemma 4 under Apache 2.0 — the most permissive open license in AI. And in China, DeepSeek V3 ships under MIT.
+
+Open-source AI is not dead. It just changed owners. And that change has implications for every consumer platform, every developer, and every business that built on the assumption that powerful AI would remain freely available.
+
+![A developer workspace with multiple monitors showing code — the kind of setup where open-source AI models get fine-tuned and deployed for production use](https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=1200&q=80)
+*The open-source AI developer's relationship with Meta just changed. But the tools on the desk — and the alternatives available — have never been better.*
+
+## What Meta walked away from
+
+Llama was not a product. It was a strategic weapon. Meta released open-weight models starting in 2023 to prevent OpenAI and Google from establishing monopolies on AI infrastructure. The strategy worked: Llama models were downloaded over 650 million times. Developers built more than 100,000 community variants on Hugging Face. Startups, universities, and governments across six continents adopted Llama as their default foundation model.
+
+Then Llama 4 landed on April 5 to mixed reviews. Scout and Maverick shipped with a community license — not Apache 2.0, not MIT, but Meta's own terms that restrict companies with over 700 million monthly active users and limit vision capabilities in the EU. The open-source community noticed the gap between Meta's rhetoric and its licensing reality.
+
+What happened next moved fast. Alexandr Wang, the former Scale AI CEO who joined Meta in June 2025 through a $14.3 billion investment, built Muse Spark in nine months with his Superintelligence Labs team. Code-named "Avocado," the model launched April 8 as Meta's first fully proprietary AI. No open weights. No community license. No fine-tuning access.
+
+Gartner analyst Arun Chandrasekaran called it a "major shift" that "signals an intention to move away from the Llama brand." On r/LocalLLaMA — the largest community of developers who run AI models on their own hardware — the reaction was sharp. One developer quoted by CNBC captured the sentiment: "The only reason I would use Llama is that I could fine-tune it." Without that, Muse Spark competes against GPT-5.4 and Claude Sonnet 4.6 on capability alone, without the customization advantage that made Llama valuable.
+
+Meta says it "hopes to open-source future versions." No timeline. No commitment.
+
+## What took its place
+
+The same week Meta went proprietary, Google released Gemma 4 under Apache 2.0 — the most permissive license in commercial AI. Four model sizes, from tiny (E2B, runs on a Raspberry Pi) to capable (31B Dense, competitive with much larger models). Over 400 million total Gemma downloads since the family launched in February 2024. Hugging Face CEO Clement Delangue called it "a huge milestone."
+
+Apache 2.0 means full commercial freedom. No usage caps. No geographic restrictions. No special licensing for large companies. A developer in Lagos or Jakarta or São Paulo gets the same terms as a Fortune 500 company in San Francisco.
+
+DeepSeek V3, from China, ships under the MIT license with competitive performance. Chinese models more broadly — Qwen, GLM-5, and others — accounted for 41% of Hugging Face downloads by late 2025. VentureBeat described the shift precisely: "Meta's role as undisputed leader of the open-weight movement has transitioned into a highly contested multi-polar landscape."
+
+The open-source AI ecosystem did not collapse when Meta walked away. It became multi-polar. And for developers, the alternatives are arguably more permissive than Llama ever was.
+
+![Server racks in a modern data center with blue lighting — the physical infrastructure where AI models run at scale](https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&q=80)
+*The AI infrastructure race is now a $200 billion annual investment. How that infrastructure is funded determines how the AI on top of it serves consumers.*
+
+## Three strategies, one week
+
+This week produced three distinct visions for how AI companies make money — and each one shapes the consumer experience differently.
+
+**Meta chose platform commerce.** Muse Spark is not a model you buy access to. It is the engine inside Meta AI's Shopping mode, where consumers describe what they want and the AI recommends products using behavioral data from Instagram, Facebook, and WhatsApp. Meta is not selling the model. Meta is selling through the model. The AI is proprietary because the value is in the integration between the recommendation engine and 3 billion users' social behavior — not in the weights themselves. Axios noted that Meta's privacy policy "sets few limits on how the company can use any data shared with its AI system." The model serves Meta's advertising clients.
+
+**OpenAI chose narrative and ads.** The same week, we learned OpenAI acquired TBPN, a talk show production company, adding media ownership to the conversational ad business it launched inside ChatGPT in February. The model is the product, and now the conversation about the model is also the product. When public opinion polls show a majority of Americans think AI risks outweigh benefits, OpenAI's response is to own more of the narrative.
+
+**Anthropic chose infrastructure.** Anthropic reported $30 billion in annualized revenue this month, launched Claude Managed Agents for enterprise deployment, and signed a 3.5 GW compute deal with Google and Broadcom. No ads. No media acquisitions. No social commerce. Revenue comes from capability sold to enterprises that build their own products. The model serves whoever pays for it, with no advertising layer between the AI and the end user.
+
+Each strategy produces a different kind of consumer AI experience. Shopping mode in Instagram serves Meta's ad revenue. ChatGPT with embedded ads serves OpenAI's monetization model. Claude serves the enterprises that build the tools consumers actually use — and those enterprises choose their own business model.
+
+## What this means for independent platforms
+
+When Meta embeds AI shopping into Instagram, independent comparison platforms face a distribution disadvantage. Meta has 3 billion users; we have a website. But we retain something Meta cannot offer: independence. An AI shopping assistant inside Instagram recommends products shaped by Meta's advertising relationships. A comparison on Mubboo's [Shopping channel](https://mubboo.com/shopping) is shaped by research and editorial judgment.
+
+When OpenAI buys media companies, independent analysis of AI products becomes more valuable, not less. The fewer independent voices covering AI, the more each remaining one matters.
+
+When Anthropic sells infrastructure without ads, platforms built on Claude can maintain editorial independence because there is no advertising layer in the stack. We build on Claude at Mubboo because the business model alignment matters. An AI model funded by enterprise subscriptions has different incentives than one funded by social commerce or conversational advertising. That alignment is not accidental — we chose it.
+
+Open-source models give us additional options for future layers. Gemma 4 running on-device could power privacy-sensitive features. DeepSeek under MIT could handle [local-first processing](https://mubboo.au) for data sovereignty across the five countries where Mubboo operates. The multi-polar open-source landscape is healthier for independent platforms than a world where one company controlled the dominant open model.
+
+## The developer in São Paulo will be fine
+
+She will switch to Gemma 4 or DeepSeek. Her Portuguese-language customer service startup will survive Meta's pivot. Apache 2.0 is more permissive than the Llama community license ever was. Her fine-tuning workflow stays intact. Her GPU stays under her control.
+
+But the 3 billion consumers using Meta AI's Shopping mode inside Instagram may not realize that the recommendations they receive are shaped by Meta's advertising relationships, not by independent editorial judgment. They will tap "Find me something like this," and the AI will respond with products that serve Meta's commerce partners alongside — or instead of — the best match for the consumer's actual needs.
+
+That gap between AI that serves the consumer and AI that serves the platform is where independent comparison platforms exist. It is where we built Mubboo, and it is why the question of who funds AI — and how — matters more this week than the question of which model scored highest on a benchmark.
+
+Open source is not dead. It is flourishing, just not at Meta. The real story is not about models. It is about business models.
