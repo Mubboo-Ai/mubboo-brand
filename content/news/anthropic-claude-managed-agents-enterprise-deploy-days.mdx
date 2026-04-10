@@ -1,0 +1,43 @@
+---
+title: "Anthropic Launches Claude Managed Agents — Enterprise AI Agents Go from Prototype to Production in Days Instead of Months"
+slug: "anthropic-claude-managed-agents-enterprise-deploy-days"
+date: "2026-04-10"
+author: "editorial-team"
+tags: ["ai", "industry"]
+excerpt: "Anthropic launched Claude Managed Agents in public beta on April 9. The composable API suite handles sandboxing, state management, and security so developers can deploy production-grade AI agents in days. Notion, Rakuten, Asana, and Sentry are among the first to ship."
+published: true
+---
+
+Anthropic launched Claude Managed Agents on April 9, a public beta that gives developers a hosted platform for building and running autonomous AI agents without setting up their own infrastructure. Notion, Rakuten, Asana, and Sentry are already using it in production. The cost: standard Claude API token pricing plus eight cents per session hour of active runtime, with web searches priced at $10 per 1,000 queries.
+
+The product is a suite of composable APIs that handle the infrastructure problems most teams spend months solving before writing any agent logic: sandboxed code execution, checkpointing and state persistence, credential management, scoped permissions, and end-to-end tracing. Anthropic describes it as moving teams "from prototype to launch in days rather than months."
+
+## What the platform handles — and what developers still own
+
+Before Managed Agents, building a production AI agent meant assembling a stack of custom infrastructure. Sandboxing so the agent can't break things. State management so it remembers what it was doing after a network interruption. Credential vaults so it can access internal tools without exposing secrets. Permission systems so it can read a spreadsheet but not delete a database. Logging so you can trace what it did and why.
+
+Anthropic now runs all of that. Developers define the agent's task, connect its tools, and set guardrails. The agent can run autonomously for extended periods, persist through disconnections, and pick up where it left off. On internal benchmarks, Anthropic reports a 10-point improvement in task success rates on structured file generation compared to standard prompting — a gain that comes from the platform's ability to let agents iterate against success criteria rather than attempting tasks in a single pass.
+
+Research previews — not yet generally available — include multi-agent coordination, where an agent can spin up subordinate agents for complex tasks, and persistent memory across interactions.
+
+## Four companies, four different agent patterns
+
+Rakuten stood up enterprise AI agents across product, sales, marketing, finance, and HR — each deployment taking roughly a week. The agents plug into Slack and Microsoft Teams, accepting natural language requests and returning deliverables like spreadsheets and slide decks. A week per department, across five departments, is the kind of rollout speed that previously required dedicated platform engineering teams working for quarters.
+
+Sentry paired its existing Seer debugging agent with a Claude-powered agent that writes code fixes and opens pull requests. Indragie Karunaratne, Senior Director of Engineering for AI/ML at Sentry, said the team "chose Claude Managed Agents because it gives us a secure, fully managed agent runtime, allowing us to focus on building a seamless developer experience."
+
+Notion is running Custom Agents in private alpha, where engineers ship code while knowledge workers generate presentations and websites. The system handles dozens of parallel tasks within a single workspace. Asana built "AI Teammates" that work alongside humans inside project management workflows, picking up tasks and drafting deliverables. The team reports adding advanced features "dramatically faster" than with previous approaches.
+
+Each adoption pattern is distinct: enterprise operations at Rakuten, developer tooling at Sentry, knowledge work at Notion, project management at Asana. The common thread is that none of these companies built their own agent infrastructure.
+
+## Anthropic's first infrastructure-as-a-service play
+
+Managed Agents runs exclusively on Anthropic's infrastructure. It is not available through AWS Bedrock or Google Vertex AI, the two cloud platforms that currently distribute Claude's standard API. That exclusivity is a strategic choice: if agents become the primary interface between enterprises and AI, the company hosting the agent runtime captures the relationship — not the cloud provider reselling API access.
+
+The pricing model supports that reading. At $0.08 per session hour plus standard token rates, Anthropic is pricing for volume adoption rather than premium margins. A Rakuten-style deployment running agents across five departments during business hours would cost modest infrastructure fees relative to the engineering salaries those agents are augmenting.
+
+This positions Anthropic more directly against OpenAI and Microsoft's enterprise AI offerings, where the competitive advantage shifts from model quality alone to the full stack: model, runtime, tooling, and security.
+
+## Mubboo's Take
+
+Claude Managed Agents is the clearest indication yet that AI is moving from conversation to execution. When [Rakuten can stand up an enterprise AI agent in a week](https://mubboo.com) that handles sales, marketing, and finance tasks in Slack, the speed of AI deployment has crossed a threshold. For platforms like Mubboo that build on Claude for content production and operational management, the trajectory is straightforward: what starts as a managed coding agent today becomes a managed [product comparison agent](https://mubboo.au) or customer service agent tomorrow. The infrastructure for AI agents that do things — not just say things — is now available as a service.
