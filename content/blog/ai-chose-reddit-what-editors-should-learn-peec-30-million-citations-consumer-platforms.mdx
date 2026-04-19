@@ -1,0 +1,76 @@
+---
+title: "AI Chose Reddit. What That Means for Everyone Building an Editorial Layer."
+slug: "ai-chose-reddit-what-editors-should-learn-peec-30-million-citations-consumer-platforms"
+date: "2026-04-19"
+publishedAt: "2026-04-19T10:00:00Z"
+dateModified: "2026-04-19T10:00:00Z"
+author: "richard-lee"
+tags: ["Vision", "Analysis"]
+excerpt: "Peec AI's 30-million-citation study names what AI actually trusts: Reddit, YouTube, LinkedIn, Wikipedia, Forbes. Not editorial sites. For anyone building a third-party review or recommendation platform, this is either a verdict or an instruction. I think it's the second. Here's what editorial work has to become."
+published: true
+readTime: "7 min read"
+---
+
+When I first read Peec AI's 30-million-citation study last week, I wrote down the top ten and looked at it for a while. Reddit. YouTube. LinkedIn. Wikipedia. Forbes. G2. Yelp. Facebook. Medium. Techradar. Of the top ten domains AI models directly cite when answering real queries across ChatGPT, Gemini, Perplexity, Google AI Mode, and AI Overviews — the five AI surfaces Peec analyzed — only two are what I'd call traditional editorial publications. Forbes and Techradar. The rest are aggregators of human voice.
+
+I have been building Mubboo on the premise that AI platforms will need a layer of independent, country-specific, editorial recommendations they can cite with confidence. That premise is either wrong or early. I spent a week thinking about which. The honest answer is that it is early but needs sharpening. AI is not citing editorial sites much today. The reasons it is not, though, are tractable. They are about what editorial work has to become to be citable, not about whether editorial work has value.
+
+This is the argument for why the gap Peec's data exposes is an opportunity, not a verdict.
+
+## What AI actually picked
+
+Peec AI's study, published March 31, 2026 by Tomek Rudzki, analyzed 30 million sources directly cited in AI-generated responses. Not training data. Not referenced-but-uncited material. URLs that visibly shaped answers on the page. The overall top ten is the combined ranking across five AI surfaces, but the platform-by-platform breakdown is more revealing.
+
+ChatGPT's top five: Wikipedia, Reddit, Forbes, Techradar, LinkedIn. Gemini's top five: Reddit, YouTube, Wikipedia, Medium, PCMag/Forbes. Perplexity's top five: Reddit, YouTube, LinkedIn, Wikipedia, G2. Google AI Mode's top five: YouTube, Reddit, Facebook, LinkedIn, Yelp. AI Overviews' top five: YouTube, Reddit, Facebook, LinkedIn, Medium.
+
+Only two sources appear in every platform's top five: Reddit and YouTube. Those are the universal AI trust signals. Beyond them, each platform has a distinct editorial philosophy. ChatGPT is the outlier, the most editorial-leaning, with Wikipedia, Forbes, and Techradar all in its top five and no Facebook or Yelp anywhere near. Google's own AI surfaces lean heavily social, reaching for Facebook and Yelp in a way neither ChatGPT nor Perplexity do. Perplexity is the most B2B-oriented, with G2 sitting comfortably in the top five when it sits nowhere else's.
+
+I have kept looking at these five lists and thinking: every AI platform has effectively decided what kind of voice it trusts most. That is not an SEO problem. It is an editorial philosophy problem. Each AI model reads the web through a particular lens, and the question for anyone building a reference layer is which lens you want to be legible to.
+
+![A person scrolling through content on a smartphone in a cafe — the aggregated human voice that AI models cite most when answering queries.](https://images.unsplash.com/photo-1512428559087-560fa5ceab42?w=1200&q=80)
+*AI reads the room. Its top citation sources are places where many humans wrote, not where one editor did.*
+
+## Why aggregators of human voice beat editorial sites today
+
+AI models build confidence through cross-source consistency. Reddit, YouTube, LinkedIn, Wikipedia, and review sites are aggregators. Hundreds or thousands of independent contributors writing about the same entity, the same product, the same question. When ten Redditors say the Roborock Q7 is great for short pet hair but struggles with long carpet, an AI model has statistical signal for that specific claim. When one editorial site says the same thing, the model has a single source. Valuable, but less cross-verifiable.
+
+Traditional SEO optimized one page with one voice. AI citation rewards one claim with many corroborating voices. The counterintuitive implication is that editorial sites do not lose because they are wrong. They lose because they are alone.
+
+There is a second order to this, and it matters. Aggregators have a structural weakness of their own. Reddit threads are noisy. YouTube transcripts are imprecise, often decorative rather than claim-dense. Yelp reviews are heavily gamed. Wikipedia's notability standards exclude huge swaths of local businesses, independent products, and regional variants. The aggregator model works well at the center of distribution and breaks at the edges.
+
+Editorial sites exist partly to address this noise. To produce the synthesized, opinionated, scenario-specific judgment that no single Redditor produces on a Sunday afternoon. The real question is not whether editorial sites can compete with Reddit. The real question is whether editorial sites can become citable in the specific cases where Reddit structurally cannot.
+
+We have been building around this assumption for months. The Peec data is the first evidence that it is the right instinct. Instinct is the easy part. Execution matters more.
+
+## Four things an editorial layer has to be to get cited
+
+**1. Scenario-specific, not keyword-specific.** Reddit wins on general queries like "best robot vacuum 2026" because aggregated community voice scales. Editorial wins on specific queries like "best robot vacuum for a 2,000 sq ft home with three long-haired pets and carpet" because specificity requires synthesis. Editorial work that does not target real scenarios loses to Reddit by design.
+
+**2. Country-specific, not global.** AI models have thin ground-truth about local regulations, currencies, retailer availability, seasonal logistics, and country-specific product variants. A German review of a kitchen appliance available only in the US is not a useful signal for a US buyer. Editorial work that is honestly local, acknowledging country constraints, fills a gap aggregators structurally cannot.
+
+**3. Opinionated with reasoning, not consensus summaries.** AI already summarizes consensus through its training data. What it needs are strong, falsifiable, reasoned opinions difficult to reach without editorial judgment. "We think X because of Y and Z" is citable. "Here are the five top-rated options" is not. The AI can generate the second on its own.
+
+**4. Structured for AI consumption, not just human consumption.** Clear claim-evidence structure. Answer-first paragraphs. Named entities. Dated statistics. Question-shaped headings. These are not tricks. They are reflections of what makes content usable to a model that reads fast and cites narrowly.
+
+We have rebuilt our editorial framework around these four requirements. It is not complete. It is probably wrong in places. It is the first framework I have seen that treats AI citation as an honest design target rather than a marketing afterthought.
+
+![An editor working on a laptop with notes and coffee nearby, natural window light — the synthesized editorial voice AI reaches for when the crowd cannot answer the specific question.](https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1200&q=80)
+*The crowd covers the common. Editorial work exists for the specific.*
+
+## What Mubboo is trying to become, honestly
+
+Mubboo is a federation of country-specific editorial layers. Shopping, Travel, Local, per country. We are not trying to out-Reddit Reddit or out-YouTube YouTube. We are trying to be the layer AI reaches for when a query demands evaluated, scenario-specific, country-specific, opinionated recommendations that no single thread or video can produce.
+
+That layer is small today. Forbes and Techradar show up in the top ten. Beyond them, very few independent editorial sites do. Our bet is that the gap is structural, not temporary. It exists because most editorial sites still write for Google's old algorithm, not for AI citation. And because most editorial sites are not actually country-specific in a way that produces citable local knowledge. The German-review-for-a-US-product problem is pervasive.
+
+We are seven months in. We are small. We have made mistakes about which content to prioritize, which channels to launch first, which countries to scale into. The compass has been adjusting.
+
+What is getting clearer is that the four requirements above are not suggestions. They are the minimum bar for an editorial layer that AI will actually cite. Anything less, and the work competes with Reddit on Reddit's terms. That is not a competition editorial work can win.
+
+I spend a lot of time reading Peec-style studies. Not for traffic advice, but for what they reveal about what AI has quietly decided to trust. The answer has been consistent for six months. Aggregated voice plus editorial authority. We are trying to be a specific, useful version of the second.
+
+Here is what I keep coming back to. Peec's data is not bad news for editorial work. It is bad news for editorial work done the old way. Generic top-ten lists. SEO-shaped paragraphs. Unnamed authors. Thin country context. No strong opinions. That kind of editorial loses to Reddit because Reddit has more voices and more honesty about scenarios.
+
+The editorial work AI actually cites, Forbes and Techradar and the smaller professional publications further down the list, shares a common trait. Identifiable authors. Domain expertise. Reasoned positions. Specific claims. They are citable because they are distinctive.
+
+That is a tall bar. It is also an honest one. We are building Mubboo against that bar, and we know it is harder than ranking on Google ever was. The alternative, competing with Reddit on volume, is not an alternative at all. The work we think matters now is the work of being worth citing when the crowd cannot answer the question.
